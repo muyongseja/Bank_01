@@ -1,4 +1,7 @@
-package com.netsong7.bank;
+package com.netsong7.bank.controller;
+
+import com.netsong7.bank.domain.FixedDepositDetail;
+import com.netsong7.bank.service.FixedDepositService;
 
 public class FixedDepositController {
 	private FixedDepositService service;

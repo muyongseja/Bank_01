@@ -1,4 +1,4 @@
-package com.netsong7.bank;
+package com.netsong7.bank.domain;
 
 public class FixedDepositDetail {
 	private long id;

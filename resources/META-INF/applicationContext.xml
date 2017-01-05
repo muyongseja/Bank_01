@@ -3,13 +3,13 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="controller" class="com.netsong7.bank.FixedDepositController">
+	<bean id="controller" class="com.netsong7.bank.controller.FixedDepositController">
 		<property name="service" ref="service" />
 	</bean>
 	
-	<bean id="service" class="com.netsong7.bank.FixedDepositService">
+	<bean id="service" class="com.netsong7.bank.service.FixedDepositService">
 		<property name="dao" ref="dao" />
 	</bean>
 	
-	<bean id="dao" class="com.netsong7.bank.FixedDepositDao" />
+	<bean id="dao" class="com.netsong7.bank.repository.FixedDepositDaoJdbc" />
 </beans>

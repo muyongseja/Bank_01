@@ -1,9 +1,11 @@
-package com.netsong7.bank;
+package com.netsong7.bank.repository;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class FixedDepositDao {
+import com.netsong7.bank.domain.FixedDepositDetail;
+
+public class FixedDepositDaoJdbc implements FixedDepositDao{
 	private String url;
 	private String driverClass;
 	private String userName;
