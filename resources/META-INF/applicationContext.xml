@@ -8,10 +8,22 @@
 	</bean>
 	
 	<bean id="service" class="com.netsong7.bank.service.FixedDepositService">
-		<property name="dao" ref="mybatisDao" />
+		<property name="dao" ref="dao" />
 	</bean>
 	
+	<!--  
 	<bean id="jdbcDao" class="com.netsong7.bank.repository.FixedDepositDaoJdbc" />
 	<bean id="mybatisDao" class="com.netsong7.bank.repository.FixedDepositDaoMabatis" />
 	<bean id="hibernateDao" class="com.netsong7.bank.repository.FixedDepositDaoHibernate" />
+	-->
+	
+	<bean id="dao" class="com.netsong7.bank.repository.FixedDepositDaoFactory"
+		factory-method="getFixedDepositDao">
+		<constructor-arg value="jdbc"></constructor-arg>
+	</bean>
 </beans>
+
+
+
+
+
