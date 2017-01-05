@@ -3,7 +3,7 @@ package com.netsong7.bank.service;
 import com.netsong7.bank.domain.FixedDepositDetail;
 import com.netsong7.bank.repository.FixedDepositDao;
 
-public class FixedDepositService {
+public class FixedDepositService implements IFixedDepositService{
 	private FixedDepositDao dao;
 	
 	public void setDao(FixedDepositDao dao) {

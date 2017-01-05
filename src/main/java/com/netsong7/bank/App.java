@@ -6,6 +6,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.netsong7.bank.controller.FixedDepositController;
+import com.netsong7.bank.controller.IFixedDepositController;
 
 public class App {
 	static final Logger logger = LogManager.getLogger(App.class);
@@ -14,7 +15,7 @@ public class App {
 		ApplicationContext ctx = 
 			new ClassPathXmlApplicationContext("classpath:META-INF/applicationContext.xml");
 		
-		FixedDepositController controller =	ctx.getBean("controller", FixedDepositController.class);
+		IFixedDepositController controller = ctx.getBean("controller", IFixedDepositController.class);
 		logger.info("정기예금 개설여부:" + controller.submit());
 		logger.info("1번고객의 정기예금 정보:" +controller.get(1));
 	}
