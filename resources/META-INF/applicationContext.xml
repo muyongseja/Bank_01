@@ -17,7 +17,16 @@
 	<bean id="hibernateDao" class="com.netsong7.bank.repository.FixedDepositDaoHibernate" />
 	-->
 	
+	<!-- 
 	<bean id="dao" class="com.netsong7.bank.repository.FixedDepositDaoFactory"
+		factory-method="getFixedDepositDao">
+		<constructor-arg value="jdbc"></constructor-arg>
+	</bean>
+	-->
+	
+	<bean id="factoryDao" class="com.netsong7.bank.repository.FixedDepositDaoFactory"/>
+	
+	<bean id="dao" factory-bean="factoryDao"
 		factory-method="getFixedDepositDao">
 		<constructor-arg value="jdbc"></constructor-arg>
 	</bean>
