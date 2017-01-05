@@ -3,11 +3,20 @@ package com.netsong7.bank.repository;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import com.netsong7.bank.App;
 import com.netsong7.bank.domain.FixedDepositDetail;
 
 public class FixedDepositDaoMabatis implements FixedDepositDao{
+	static final Logger logger = LogManager.getLogger(App.class);
 	private Map<Long, FixedDepositDetail> fixedDeposits = 
 			new HashMap<Long, FixedDepositDetail>();
+	
+	public FixedDepositDaoMabatis(){
+		logger.info("Mybatis방식의 DAO 클래스 사용");
+	}
 	
 	public boolean createFixedDeposit(FixedDepositDetail fdd){
 		fixedDeposits.put(fdd.getId(), fdd);

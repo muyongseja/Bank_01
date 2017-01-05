@@ -1,12 +1,12 @@
 package com.netsong7.bank.service;
 
 import com.netsong7.bank.domain.FixedDepositDetail;
-import com.netsong7.bank.repository.FixedDepositDaoJdbc;
+import com.netsong7.bank.repository.FixedDepositDao;
 
 public class FixedDepositService {
-	private FixedDepositDaoJdbc dao;
+	private FixedDepositDao dao;
 	
-	public void setDao(FixedDepositDaoJdbc dao) {
+	public void setDao(FixedDepositDao dao) {
 		this.dao = dao;
 	}
 
