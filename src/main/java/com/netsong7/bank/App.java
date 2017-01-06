@@ -7,6 +7,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.netsong7.bank.controller.FixedDepositController;
 import com.netsong7.bank.controller.IFixedDepositController;
+import com.netsong7.bank.domain.FixedDepositDetail;
 import com.netsong7.bank.service.IFixedDepositService;
 
 public class App {
@@ -23,5 +24,16 @@ public class App {
 		*/
 		
 		IFixedDepositService service = ctx.getBean("service", IFixedDepositService.class);
+		service.createFixedDeposit(new FixedDepositDetail(1, 100, 100, "bbb@bbb.net"));
 	}
 }
+
+
+
+
+
+
+
+
+
+

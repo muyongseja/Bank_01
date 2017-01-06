@@ -1,10 +1,12 @@
 package com.netsong7.bank.domain;
 
+import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 
 public class FixedDepositDetail {
 	private long id;
 	@Min(1000)
+	@Max(50000000)
 	private float depositAmount;
 	private int tenure;
 	private String email;
