@@ -1,5 +1,8 @@
 package com.netsong7.bank.repository;
 
+import org.springframework.stereotype.Repository;
+
+@Repository("factoryDao")
 public class FixedDepositDaoFactory {
 	/*
 	private FixedDepositDaoFactory(){}
