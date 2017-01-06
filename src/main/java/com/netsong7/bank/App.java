@@ -24,7 +24,7 @@ public class App {
 		*/
 		
 		IFixedDepositService service = ctx.getBean("service", IFixedDepositService.class);
-		service.createFixedDeposit(new FixedDepositDetail(1, 100, 100, "bbb@bbb.net"));
+		service.createFixedDeposit(new FixedDepositDetail(1, 1000, 100, "bbb@bbb.net"));
 	}
 }
 
